@@ -8,16 +8,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <style>
+        html {
+            height: 100%;
+            margin: 0;
+        }
         .clearfix::after {
         content: "";
         clear: both;
         display: block;
         }
+        .background--image {
+            background-image:url('maxresdefault.jpg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
     </style>
 </head>
 <header>
 </header>
-<body>
+<body class="background--image">
         <div class="page">
             <div class="content">
                 <div class="content-header"></div>
@@ -48,7 +59,86 @@
                                 <input type="password" id="pwd" name="pwd" maxlength="20" placeholder="password" required>
                             </div>
                             <div class="class1">
-                                <button style="width:100%" type="submit" id="btn_login" >로그인</button>
+                                <button style="width:100%;
+                                color: white;
+                                line-height: 30px;
+                                text-align: center;
+                                background: blue;
+                                border: solid 2px grey;
+                                border-radius: 20px;" type="submit" id="" >로그인</button>
+                            </div>
+                            <div class="class1">
+                                <style>
+                                    .checkbox-container {
+                                        position: relative;
+                                        }
+                                        
+                                        /*기존체크박스제거*/
+                                        .checkbox-container input[type="checkbox"] {
+                                        position: absolute;
+                                        width: 1px;
+                                        height: 1px;
+                                        padding: 0;
+                                        margin: -1px;
+                                        overflow: hidden;
+                                        clip:rect(0,0,0,0);
+                                        border: 0
+                                        }
+                                        /*기존체크박스제거*/
+                                        .checkbox-container input[type="checkbox"] + label {
+                                        display: inline-block;
+                                        position: relative;
+                                        cursor: pointer;
+                                        -webkit-user-select: none;
+                                        -moz-user-select: none;
+                                        -ms-user-select: none;
+                                        user-select: none;
+                                        }
+                                        /*새로운 체크박스 레이아웃*/
+                                        .checkbox-container input[type="checkbox"] + label:before {
+                                        content: ' ';
+                                        display: inline-block;
+                                        width: 24px;
+                                        height: 24px;
+                                        line-height: 24px;
+                                        margin: 0 5px 0 0;
+                                        background: #fafafa;
+                                        border: 0px solid #cacece;
+                                        border-radius: 3px;
+                                        box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+                                        }
+                                        /*새로운 체크박스 레이아웃*/
+                                        .checkbox-container input[type="checkbox"] + label:active:before,
+                                        .checkbox-container input[type="checkbox"]:checked + label:active:before {
+                                                box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+                                        
+                                        }
+                                        
+                                        .checkbox-container input[type="checkbox"]:checked + label:before {
+                                        content: '\2713';
+                                        color: white;
+                                        background: #42ff9f3d;
+                                        border-color: #adb8c0;
+                                        box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+                                        }
+                                </style>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="is-check">
+                                    <label for="is-check" style="font-size: 12px;">로그인정보저장</label>
+                                </div>
+                            </div>
+                            <style>
+                                .div_temp_style_00000001 > button {
+                                    width:40%;
+                                    height:50px;
+                                    background: white;
+                                    border: solid 2px grey;
+                                    border-radius: 40px;
+                                }
+                            </style>
+                            <div class="div_temp_style_00000001">
+                                <button style="float:left" type="submit" id="" >회원가입</button>
+                                <button style="float:right;"type="submit" id="" >로그인톡 없이<br>회원가입</button>
                             </div>
                         </form>
                     </section>
