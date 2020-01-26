@@ -18,143 +18,96 @@
 <body>
     <div class="page">
         <div class="content">
+            <div class="content-header" style="padding: 30px 200px; background-color:black">
+            </div>
             <div class="content-inner" style="display: flex; justify-content: center; align-items: center; padding: 50px 0">
-                <!-- <form action="" id="joinForm"> -->
-                    <!-- <ul class="join_box">
-                        <li class="checkBox check02">
-                            <ul class="clearfix">
-                                <li>이용약관 동의(필수)</li>
-                                <li class="checkBtn">
-                                    <input type="checkbox" name="chk"> 
-                                </li>
-                            </ul>
-                            <textarea name="" id="">여러분을 환영합니다.
-        네이버 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 다양한 네이버 서비스의 이용과 관련하여 네이버 서비스를 제공하는 네이버 주식회사(이하 ‘네이버’)와 이를 이용하는 네이버 서비스 회원(이하 ‘회원’) 또는 비회원과의 관계를 설명하며, 아울러 여러분의 네이버 서비스 이용에 도움이 될 수 있는 유익한 정보를 포함하고 있습니다.
-               </textarea>
-                        </li>
-                        <li class="checkBox check03">
-                            <ul class="clearfix">
-                                <li>개인정보 수집 및 이용에 대한 안내(필수)</li>
-                                <li class="checkBtn">
-                                    <input type="checkbox" name="chk">
-                                </li>
-                            </ul>
-         
-                            <textarea name="" id="">여러분을 환영합니다.
-        네이버 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 다양한 네이버 서비스의 이용과 관련하여 네이버 서비스를 제공하는 네이버 주식회사(이하 ‘네이버’)와 이를 이용하는 네이버 서비스 회원(이하 ‘회원’) 또는 비회원과의 관계를 설명하며, 아울러 여러분의 네이버 서비스 이용에 도움이 될 수 있는 유익한 정보를 포함하고 있습니다.
-               </textarea>
-                        </li>
-                        <li class="checkBox check03">
-                            <ul class="clearfix">
-                                <li>위치정보 이용약관 동의(선택)</li>
-                                <li class="checkBtn">
-                                    <input type="checkbox" name="chk">
-                                </li>
-                            </ul>
-         
-                            <textarea name="" id="">여러분을 환영합니다.
-        네이버 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 다양한 네이버 서비스의 이용과 관련하여 네이버 서비스를 제공하는 네이버 주식회사(이하 ‘네이버’)와 이를 이용하는 네이버 서비스 회원(이하 ‘회원’) 또는 비회원과의 관계를 설명하며, 아울러 여러분의 네이버 서비스 이용에 도움이 될 수 있는 유익한 정보를 포함하고 있습니다.
-               </textarea>
-                        </li>
-                        <li class="checkBox check04">
-                            <ul class="clearfix">
-                                <li>이벤트 등 프로모션 알림 메일 수신(선택</li>
-                                <li class="checkBtn">
-                                    <input type="checkbox" name="chk">
-                                </li>
-                            </ul>
-         
-                        </li>
-                    </ul> -->
-                <!-- </form> -->
-                    <section>
-                        <form action="" style="width: 300px;">
-                            <style>
-                                .sign_up_Policy_style_00000002 {
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: center;
-                                    padding-bottom: 7px;
-                                    align-items: center;
-                                    font-size: 14px;
-                                }
-                                .sign_up_Policy_style_00000002 input[type="checkbox"] {
-                                    display:none;
-                                }
-                                .sign_up_Policy_style_00000002 input[type="checkbox"] + label span {
-                                    display:inline-block;
-                                    width:22px;
-                                    height:22px;
-                                    margin: 0px 10px 3px -4px;
-                                    vertical-align:middle;
-                                    background:url(check.png) left top no-repeat;
-                                    cursor:pointer;
-                                    background-size: cover;
-                                }
-                                .sign_up_Policy_style_00000002 input[type="checkbox"]:checked + label span {
-                                    background:url(check.png) -24px top no-repeat;
-                                    background-size: cover;
-                                }
-                                .sign_up_Policy_style_00000002 textarea{
-                                   width:100%; 
-                                   height: 10vh; 
-                                   box-sizing: border-box;
-                                    margin-top: 8px;
-                                    border: 1px solid black;
-                                }
-                            </style>
-                            <div class="sign_up_Policy_style_00000002">
-                                <div style="align-self:flex-start">
-                                    <input type="checkbox" id="is-check1">
-                                    <label style="width: 100%;" for="is-check1"><span></span>스콜서비스 이용약관(필수)</label>
-                                </div>
-                                <textarea readonly name="" id=""></textarea>
-                            </div>
-                            <div class="sign_up_Policy_style_00000002">
-                                <div style="align-self:flex-start">
-                                    <input type="checkbox" id="is-check2">
-                                    <label style="width: 100%;" for="is-check2"><span></span>개인정보 수집 및 이용에 대한 동의(필수)</label>
-                                </div>
-                                <textarea readonly name="" id=""></textarea>
-                            </div>
-                            <div class="sign_up_Policy_style_00000002">
-                                <div style="align-self:flex-start">
-                                    <input type="checkbox" id="is-check3">
-                                    <label style="width: 100%;" for="is-check3"><span></span>위치 수집 동의(필수)</label>
-                                </div>
-                                <textarea readonly name="" id=""></textarea>
-                            </div>
-                            <div class="sign_up_Policy_style_00000002">
-                                <div style="align-self:flex-start">
-                                    <input type="checkbox" id="is-check4">
-                                    <label style="width: 100%;" for="is-check4"><span></span>마케팅 정보 제공에 대한 동의(선택)</label>
-                                </div>
-                                <textarea readonly name="" id=""></textarea>
-                            </div>
-                            
-                        </form>
-                    </section>
+                <form action="" style="width: 300px;">
                     <style>
-                        .sign_up_Policy_style_00000001 {
-                            position:absolute; 
-                            bottom:0; 
-                            padding: 20px 0;
-                            width: 400px;
+                        .sign_up_Policy_style_00000002 {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            padding-bottom: 7px;
+                            align-items: center;
+                            font-size: 14px;
                         }
-                        .sign_up_Policy_style_00000001 > button {
-                            width:50%;
-                            height:50px;
-                            /* 
-                            border: 1px;
-                            outline: 1px;
-                            */
+                        .sign_up_Policy_style_00000002 input[type="checkbox"] {
+                            display:none;
+                        }
+                        .sign_up_Policy_style_00000002 input[type="checkbox"] + label span {
+                            display:inline-block;
+                            width:22px;
+                            height:22px;
+                            margin: 0px 10px 3px -4px;
+                            vertical-align:middle;
+                            background:url(check.png) left top no-repeat;
+                            cursor:pointer;
+                            background-size: cover;
+                        }
+                        .sign_up_Policy_style_00000002 input[type="checkbox"]:checked + label span {
+                            background:url(check.png) -24px top no-repeat;
+                            background-size: cover;
+                        }
+                        .sign_up_Policy_style_00000002 textarea{
+                            width:100%; 
+                            height: 10vh; 
+                            box-sizing: border-box;
+                            margin-top: 8px;
+                            border: 1px solid black;
                         }
                     </style>
-                    <div class="sign_up_Policy_style_00000001">
-                        <button style="background-color: rgb(255, 255, 255); float:left">이전</button>
-                        <button style="background-color: rgb(0, 204, 255); float:right">다음</button>
+                    <div class="sign_up_Policy_style_00000002">
+                        <div style="align-self:flex-start">
+                            <input type="checkbox" id="is-check1">
+                            <label style="width: 100%;" for="is-check1"><span></span>스콜서비스 이용약관(필수)</label>
+                        </div>
+                        <textarea readonly name="" id=""></textarea>
                     </div>
+                    <div class="sign_up_Policy_style_00000002">
+                        <div style="align-self:flex-start">
+                            <input type="checkbox" id="is-check2">
+                            <label style="width: 100%;" for="is-check2"><span></span>개인정보 수집 및 이용에 대한 동의(필수)</label>
+                        </div>
+                        <textarea readonly name="" id=""></textarea>
+                    </div>
+                    <div class="sign_up_Policy_style_00000002">
+                        <div style="align-self:flex-start">
+                            <input type="checkbox" id="is-check3">
+                            <label style="width: 100%;" for="is-check3"><span></span>위치 수집 동의(필수)</label>
+                        </div>
+                        <textarea readonly name="" id=""></textarea>
+                    </div>
+                    <div class="sign_up_Policy_style_00000002">
+                        <div style="align-self:flex-start">
+                            <input type="checkbox" id="is-check4">
+                            <label style="width: 100%;" for="is-check4"><span></span>마케팅 정보 제공에 대한 동의(선택)</label>
+                        </div>
+                        <textarea readonly name="" id=""></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="content-bottom">
+                <style>
+                    .sign_up_Policy_style_00000001 {
+                        position:fixed; 
+                        left:0px; 
+                        bottom:0px; 
+                        width:100%; 
+                    }
+                    .sign_up_Policy_style_00000001 > button {
+                        width:50%;
+                        height:50px;
+                        /* 
+                        border: 1px;
+                        outline: 1px;
+                        */
+                    }
+                </style>
+                <div class="sign_up_Policy_style_00000001">
+                    <button style="background-color: rgb(255, 255, 255); float:left">이전</button>
+                    <button style="background-color: rgb(0, 204, 255); float:right">다음</button>
                 </div>
+            </div>
         </div>    
     </div>
 </body>
