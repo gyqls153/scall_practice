@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>S-Call</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+          }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="content">
+            <div class="content-header" style="display: flex; 
+                                                justify-content: center; 
+                                                align-items: center;">
+                <div style="width:300px; margin-bottom:20px">
+                    <input onkeyup="enterkey()" type="text" id="search-keyword" placeholder="검색어를 입력해주세요." style="width:100%; margin-bottom:10px">
+                    <div style="font-size: 10px;">
+                        <select name="job" style="border-radius: 7px; width: 100px; font-size: 10px;">
+                            <option value="전국">전국</option>
+                            <option value="전국2">전국2</option>
+                            <option value="전국3">전국3</option>
+                            <option value="전국4">전국4</option>
+                        </select>
+                        <div style="float:right">
+                            <input type="radio" name="chk_info" value="Recommend" checked="checked" >추천순
+                            <input type="radio" name="chk_info" value="Name">이름순
+                            <input type="radio" name="chk_info" value="Distance">거리순
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function enterkey() {
+                    if (window.event.keyCode == 13) {
+                        makeListElement();
+                    }
+                }
+                function makeListElement()
+                {
+                    var keyword = document.getElementById('search-keyword').value;
+                    if (0 >= keyword.length)
+                    {
+                        keyword = "기본값"
+                    }
+
+                    var table_root = document.getElementById("table-root");
+                    var div_main = document.createElement('div');
+                    div_main.style="display: table; width: 300px; margin-bottom:10px";
+
+                    {
+                        var div1 = document.createElement('div');
+                        div1.style="display: table-cell; width:200px; height: 50px";
+    
+                        {
+                            var div_child = document.createElement('div');
+                            var newContent = document.createTextNode(keyword); 
+
+                            div_child.style="color:#3399ff;\
+                                             font-weight:bold;\
+                                             margin-bottom:4px;\
+                                             font-size: 17px";
+                            
+                            div_child.appendChild(newContent);
+                            div1.appendChild(div_child);
+                        }
+    
+                        {
+                            var div_child = document.createElement('div');
+                            var newContent = document.createTextNode("서울특별시"); 
+
+                            div_child.style="color: rgb(179, 179, 179);\
+                                             margin-bottom:10px;\
+                                             font-size: 10px";
+                            
+                            div_child.appendChild(newContent);
+                            div1.appendChild(div_child);
+                        }
+    
+                        {
+                            var div_child = document.createElement('div');
+                            var newContent = document.createTextNode("0.0km"); 
+
+                            div_child.style="color: red;\
+                                             font-weight:bold;\
+                                             font-size: 10px";
+                            
+                            div_child.appendChild(newContent);
+                            div1.appendChild(div_child);
+                        }
+    
+                        div_main.appendChild(div1);
+                    }
+
+                    {
+                        var div1 = document.createElement('div');
+                        div1.style="display: table-cell; vertical-align: middle; width: 25px; height: 25px";
+    
+                        {
+                            var wrapperDiv = document.createElement('div');
+                            wrapperDiv.style="display: table-cell; width: inherit; height: inherit";
+                            
+                            var button_child = document.createElement('button');
+                            var img = document.createElement('img');
+                            img.src="pin.png";
+                            img.alt="Pos";
+                            img.width = "8";
+                            img.height = "11";
+                            img.style="display: table-cell;"
+                            
+                            button_child.style="border-radius: 7px;\
+                                                border: 1px solid rgba(0, 0, 0, 0.1);\
+                                                background: rgba(0,0,0,0);\
+                                                height:100%;\
+                                                width:100%;\
+                                                display: flex;\
+                                                justify-content: center;";
+                                                
+
+                            button_child.appendChild(img);
+                            wrapperDiv.appendChild(button_child);
+                            div1.appendChild(wrapperDiv);
+                        }
+    
+                        div_main.appendChild(div1);
+                        table_root.appendChild(div_main);
+                    }
+
+                    {
+                        var div1 = document.createElement('div');
+                        div1.style="display: table-cell; vertical-align: middle; height: 25px;";
+    
+                        {
+                            var wrapperDiv = document.createElement('div');
+                            wrapperDiv.style="display: table-cell;  height: inherit; display: flex; justify-content: flex-end";
+
+                            var button_child = document.createElement('button');
+                            button_child.style="border-radius: 7px;\
+                                                border: 1px solid rgba(0, 0, 0, 0.1);\
+                                                background: rgba(0,0,0,0);\
+                                                height:100%;\
+                                                width: 70px;\
+                                                font-size:7px";
+                            
+                            var textNode = document.createTextNode("출발");
+                            button_child.appendChild(textNode);
+                                                
+                            wrapperDiv.appendChild(button_child);
+                            div1.appendChild(wrapperDiv);
+                        }
+    
+                        div_main.appendChild(div1);
+                        table_root.appendChild(div_main);
+                    }
+                }
+            </script>
+            <div class="content-inner" style="display: flex; 
+                                                justify-content: center; 
+                                                align-items: center;">
+                <div style="display: table;" id="table-root">
+                </div>
+            </div>
+
+            <!-- 연습장 -->
+            <div style="visibility: hidden;">
+            <div style="font-weight:bold"></div>
+            <style>
+                .test {
+                    font-size: 10px;
+                    color: rgb(78, 90, 253);
+                }
+            </style>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
